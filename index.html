@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;900&display=swap" rel="stylesheet">
     <title>Twittler</title>
 </head>
 
@@ -15,28 +17,37 @@
     <div class="form_container">
         <form action="get">
             <label for="user_name">User Name</label>
-            <input type="text" id="user_name--input" name="user_name">
+            <input type="text" id="user__name--input" name="user_name" placeholder="이름을 입력해주세요">
             <label for="comment">Comment</label>
-            <input type="text" id="comment--input" name="comment">
+            <textarea type="text" id="comment--input" name="comment" placeholder="무슨 일이 일어나고 있나요?">
+                </textarea>
+            <input type="submit" value="tweet!" id="btn__submit" class="btn">
         </form>
     </div>
-    <div class="twit_container">
+    <div class="twit--container">
         <div class="ckeck__btn--container">
-            <button>check new tweet</button>
+            <button class="btn">check new tweet</button>
         </div>
         <div class="twitt__view--container">
             <ul class="twitt__view--list">
+
                 <li class="twitt__item">
                     <p class="twitt__info">
-                        name <span class="twitt__date">2019-01-03</span>
+                        <span class="twitt__name">user name</span>
+                        <span class="twitt__date">2019-01-03</span>
                         <span class="twitt__time">12:30:20</span>
                     </p>
                     <p class="twitt__text">
                         welcome to code states <span class="tag">#codestates</span>
                     </p>
                 </li>
+
             </ul>
         </div>
+    </div>
+
+    <div class="bg--container">
+        <div class="bg-lighter"></div>
     </div>
 </body>
 <script src="main.js"></script>
